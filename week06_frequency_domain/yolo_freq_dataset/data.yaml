@@ -1,0 +1,6 @@
+names:
+- object
+nc: 1
+path: c:\Users\Dragos\OneDrive\Coding Python\ComputerVision\week06_frequency_domain\yolo_freq_dataset
+train: images/train
+val: images/val
