@@ -1,0 +1,6 @@
+path: c:/Users/dbxdr/OneDrive/Coding Python/ComputerVision/week06_frequency_domain/lab06/data/lab06/car_det_split
+train: images/train
+val: images/val
+
+nc: 1
+names: ['car']

@@ -1,0 +1,31 @@
+======================================================================
+TASK 6: KAGGLE DATASET TRAINING AND EVALUATION
+======================================================================
+
+DATASET:
+  Source: Kaggle - trainingdatapro/cars-video-object-tracking
+  Downloaded: 301 video frames (1920x1080 PNG)
+  Labels: CVAT XML -> Converted to YOLO format
+  Classes: car (1), minivan (2) - mapped to class 0
+  Train/Test Split: 70/30 = 210 train, 91 test
+
+TRAINING ATTEMPT:
+  Model: YOLOv8n (nano, 3.2M parameters)
+  Configuration: 5 epochs, 640x640 resolution, CPU training
+  Result: Model trained but did not converge (precision=0, recall=0, mAP=0)
+  Issue: Small dataset (210 images) + only 5 epochs insufficient for convergence
+
+EVALUATION (Using Pretrained YOLOv8n):
+  Model: YOLOv8n (pretrained on COCO)
+  Metric: IoU threshold >= 0.5
+  Total Ground Truth Objects: 1771
+  Total Predictions: 1276
+  Well-Identified (IoU>=0.5): 1144
+  Precision: 0.897
+  Recall: 0.646
+  F1-Score: 0.751
+
+NOTES:
+  - The pretrained YOLO model achieves 89.7% precision
+  - Custom training would require >20 epochs and/or more data for convergence
+  - Average object size after resize: ~48x48 pixels (reasonable)

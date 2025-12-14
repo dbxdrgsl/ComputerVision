@@ -1,0 +1,2 @@
+total_gt,total_pred,well_identified,precision,recall,f1_score
+1771,1276,1144,0.896551724137931,0.6459627329192547,0.7509025270758123
